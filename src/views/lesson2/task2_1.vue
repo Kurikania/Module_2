@@ -80,28 +80,49 @@ export default {
         this.answer = { month : '' , season: '' }
       },
 
-       setSelected(value) {
-      this.selected = parseInt(value);  
+      setSelected(value) {
+      this.selected = value;  
       }, 
       count() {
-           if (this.selected < 3 || this.selected === 12) this.answer.season = "зима"
-          else if(this.selected >= 3 || this.selected < 6) this.answer.season = "весна"
-          else if(this.selected >= 6 || this.selected < 9) this.answer.season = "лето" 
-          else if(this.selected >= 9 || this.selected < 12) this.answer.season = "осень"  
+      this.selected = Number(this.selected);
+      switch (this.selected) {
+            case 1:
+            case 2:
+            case 12:
+            this.answer.season = "зима";
+              break;
+            case 3:
+            case 4:
+            case 5:
+            this.answer.season  = "весна";
+              break;
+            case 6:
+            case 7:
+            case 8:
+            this.answer.season  = "лето";
+              break;
+            case 9:
+            case 10:
+            case 11:
+            this.answer.season  = "осень";
+              break
+          }
 
-          if (this.selected === 1) {return this.answer.month = "январь"} 
-          else if (this.selected === 2) {return this.answer.month = "февраль"}
-          else if (this.selected === 3) {return this.answer.month = "март"}       
-          else if (this.selected === 4) {return this.answer.month = "апрель"} 
-          else if (this.selected === 5) {return this.answer.month = "май"}
-          else if (this.selected === 6) {return this.answer.month = "июнь"}
-          else if (this.selected === 7) {return this.answer.month = "июль"}  
-          else if (this.selected === 8) {return this.answer.month = "август"}
-          else if (this.selected === 9) {return this.answer.month = "сентябрь"}
-          else if (this.selected === 10) {return this.answer.month = "октябрь"}
-          else if (this.selected === 11) {return this.answer.month = "ноябрь"} 
-          else if (this.selected === 12) {return this.answer.month = "декабрь"}
-                                                                
+          if (this.selected === 1) { this.answer.month = "январь"} 
+          else if (this.selected === 2) { this.answer.month = "февраль"}
+          else if (this.selected === 3) { this.answer.month = "март"}       
+          else if (this.selected === 4) { this.answer.month = "апрель"} 
+          else if (this.selected === 5) { this.answer.month = "май"}
+          else if (this.selected === 6) { this.answer.month = "июнь"}
+          else if (this.selected === 7) { this.answer.month = "июль"}  
+          else if (this.selected === 8) { this.answer.month = "август"}
+          else if (this.selected === 9) { this.answer.month = "сентябрь"}
+          else if (this.selected === 10) { this.answer.month = "октябрь"}
+          else if (this.selected === 11) { this.answer.month = "ноябрь"} 
+          else if (this.selected === 12) { this.answer.month = "декабрь"}
+             
+          console.log(this.answer.month , this.answer.season)
+             return this.answer
         }
       }
     }

@@ -39,20 +39,20 @@
     ></v-text-field>
 
     <v-btn
+      color="error"
+      class="mr-4"
+      @click="reset"
+    >
+      Очистить Форму
+    </v-btn>
+
+    <v-btn
       :disabled="!valid"
       color="success"
       class="mr-4"
       @click="count"
     >
       Посчитать
-    </v-btn>
-
-    <v-btn
-      color="error"
-      class="mr-4"
-      @click="reset"
-    >
-      Очистить Форму
     </v-btn>
 
   </v-form>
