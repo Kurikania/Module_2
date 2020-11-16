@@ -52,7 +52,7 @@ var area = [ null, null, null, null, null, null, null, null, null ]
 
         </v-card-text>
          <v-card-text> 
-             <p> Использовать documen.write в Vue было бы немного странно. Клалссический вариант решения представлен отдельно в корне my app</p>
+             <p> Использовать documen.write в Vue было бы немного странно. Клалссический вариант решения представлен отдельно в корне my app task3_2.html</p>
              <v-row  class="d-flex justify-center" v-for="(arr, index) in answer" :key="index" no-gutters >
                   <v-col class="flex-grow-0" v-for="(n, index) in arr" :key="index"> <v-card class="text-center" style="margin: 8px" outlined :elevation="2" height="60" width="60">
                       <v-card-text style="font-size: 1.2em" class = "full-height pa-4 d-flex flex-column">
