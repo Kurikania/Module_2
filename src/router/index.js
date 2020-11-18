@@ -84,7 +84,27 @@ const routes = [
     path: '/task3_5',
     name: 'Task3_5',
     component: () => import(/* webpackChunkName: "about" */ '../views/lesson3/task3_5.vue')
-  }
+  },
+  {
+    path: '/task4_1',
+    name: 'Task4_1',
+    component: () => import(/* webpackChunkName: "about" */ '../views/lesson4/task4_1.vue')
+  },
+  {
+    path: '/task4_2',
+    name: 'Task4_2',
+    component: () => import(/* webpackChunkName: "about" */ '../views/lesson4/task4_2.vue')
+  },
+  {
+    path: '/task4_3',
+    name: 'Task4_3',
+    component: () => import(/* webpackChunkName: "about" */ '../views/lesson4/task4_3.vue')
+  },
+  {
+    path: '/task4_4',
+    name: 'Task4_4',
+    component: () => import(/* webpackChunkName: "about" */ '../views/lesson4/task4_4.vue')
+  },
 ]
 
 const router = new VueRouter({

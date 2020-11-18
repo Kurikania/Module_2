@@ -7,16 +7,19 @@
       app
     >
       <v-list>
+
+
       <v-list-group
       :value="true"
       no-action
       sub-group
+      v-for="(lesson, index) in lessons" :key = index
     >
       <template v-slot:activator>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="title">
-            Занятие 1 
+            Занятие {{index + 1}} 
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
@@ -24,7 +27,7 @@
 
    <v-divider></v-divider>
 
-        <v-list-item v-for="item in items" router :to="item.route" :key="item.route" >
+        <v-list-item v-for="item in lesson" router :to="item.route" :key="item.route" >
             <v-list-item-content>
               <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item-content>        
@@ -32,48 +35,7 @@
 
       </v-list-group>
 
-      <v-list-group
-
-        no-action
-        sub-group
-      >
-      <template v-slot:activator>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="title">
-            Занятие 2 
-          </v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      </template>
-   <v-divider></v-divider>
-      <v-list-item v-for="item in items2" router :to="item.route" :key="item.route" >
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>        
-      </v-list-item>
-      </v-list-group>
-
-      <v-list-group
-      no-action
-      sub-group
-      >
-      <template v-slot:activator>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="title">
-            Занятие 3  
-          </v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      </template>
-
-        <v-list-item v-for="item in items3" router :to="item.route" :key="item.route" >
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>        
-      </v-list-item>
-      </v-list-group>
+     
         
       </v-list>
 
@@ -100,7 +62,8 @@ export default {
     data: () => ({ 
       drawer: true,
       clipped: false,
-      items: [
+      lessons : [
+          [
         {   
           title: 'Задание 1',
           route: '/'
@@ -123,7 +86,7 @@ export default {
         },
               
       ],
-      items2: [
+          [
         {   
           title: 'Задание 2_1',
           route: '/task2_1'
@@ -149,7 +112,7 @@ export default {
           route: '/task2_6'
         },
        ],
-         items3: [
+          [
         {   
           title: 'Задание 3_1',
           route: '/task3_1'
@@ -170,8 +133,26 @@ export default {
           title: 'Задание 3_5',
           route: '/task3_5'
         },
+      ],
+        [
+        {   
+          title: 'Задание 4_1',
+          route: '/task4_1'
+        },
+        {
+          title: 'Задание 4_2',
+          route: '/task4_2'
+        },
+        {
+          title: 'Задание 4_3',
+          route: '/task4_3'
+        },
+        {
+          title: 'Задание 4_4',
+          route: '/task4_4'
+        }
       ]
-    
+      ]
     }),
 
  
