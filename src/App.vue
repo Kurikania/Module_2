@@ -150,8 +150,43 @@ export default {
         {
           title: 'Задание 4_4',
           route: '/task4_4'
-        }
-      ]
+        }]
+        ,[{
+          title: 'Задание 5_1',
+          route: '/task5_1'
+        },
+        {
+          title: 'Задание 5_2',
+          route: '/task5_2'
+        },
+        {
+          title: 'Задание 5_3',
+          route: '/task5_3'
+        },
+        {
+          title: 'Задание 5_4',
+          route: '/task5_4'
+        }]
+        ,[{
+          title: 'Задание 6_1',
+          route: '/task6_1'
+        },
+        {
+          title: 'Задание 6_2',
+          route: '/task6_2'
+        },
+        {
+          title: 'Задание 6_3',
+          route: '/task6_3'
+        },
+        {
+          title: 'Задание 6_4',
+          route: '/task6_4'
+        },
+        {
+          title: 'Задание 6_5',
+          route: '/task6_5'
+        }]
       ]
     }),
 

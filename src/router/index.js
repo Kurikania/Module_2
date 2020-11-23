@@ -105,6 +105,51 @@ const routes = [
     name: 'Task4_4',
     component: () => import(/* webpackChunkName: "about" */ '../views/lesson4/task4_4.vue')
   },
+  {
+    path: '/task5_1',
+    name: 'Task5_1',
+    component: () => import(/* webpackChunkName: "about" */ '../views/lesson5/task5_1.vue')
+  },
+  {
+    path: '/task5_2',
+    name: 'Task5_2',
+    component: () => import(/* webpackChunkName: "about" */ '../views/lesson5/task5_2.vue')
+  },
+  {
+    path: '/task5_3',
+    name: 'Task5_3',
+    component: () => import(/* webpackChunkName: "about" */ '../views/lesson5/task5_3.vue')
+  },
+  {
+    path: '/task5_4',
+    name: 'Task5_4',
+    component: () => import(/* webpackChunkName: "about" */ '../views/lesson5/task5_4.vue')
+  },
+  {
+    path: '/task6_1',
+    name: 'Task6_1',
+    component: () => import(/* webpackChunkName: "about" */ '../views/lesson6/task6_1.vue')
+  },
+  {
+    path: '/task6_2',
+    name: 'Task6_2',
+    component: () => import(/* webpackChunkName: "about" */ '../views/lesson6/task6_2.vue')
+  },
+  {
+    path: '/task6_3',
+    name: 'Task6_3',
+    component: () => import(/* webpackChunkName: "about" */ '../views/lesson6/task6_3.vue')
+  },
+  {
+    path: '/task6_4',
+    name: 'Task6_4',
+    component: () => import(/* webpackChunkName: "about" */ '../views/lesson6/task6_4.vue')
+  },
+  {
+    path: '/task6_5',
+    name: 'Task6_5',
+    component: () => import(/* webpackChunkName: "about" */ '../views/lesson6/task6_5.vue')
+  },
 ]
 
 const router = new VueRouter({

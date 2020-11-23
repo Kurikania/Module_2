@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button>Жми</button>
+    <p></p>  
+
+<script>
+let answer = "";
+const f1 = function() {
+	let used = [];
+	return function() {
+		let new_num = Math.floor(Math.random() * 100 + 1);
+		for (let i = 0; i < used.length; i++) {
+			if (used[i] == new_num) {return}
+		};
+		answer += new_num+', ';
+		used.push(new_num);
+	}
+}
+let run = f1(); 
+run()
+run()
+run()
+run()
+console.log(answer)
+
+</script>
+</body>
+</html>
